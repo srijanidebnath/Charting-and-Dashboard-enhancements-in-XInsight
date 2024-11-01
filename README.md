@@ -12,8 +12,7 @@ This project involves creating an interactive dashboard using Streamlit that all
 Below is a step-by-step guide for using the Streamlit dashboard:
 
   a.Launching the Dashboard:
-  
-    Run the script final_demo_interface.py in a Streamlit-compatible environment by executing streamlit run dashboard.py       in the terminal. 
+    Run the script demo_interface.py in a Streamlit-compatible environment by executing streamlit run demo_interface.py in the terminal. 
   
   b.Uploading a Dataset:
     Select “Upload a file” and upload a CSV or Excel file. Ensure the file is either .csv, .xlsx, or .xls.
