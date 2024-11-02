@@ -1,6 +1,13 @@
 # Streamlit Dashboard for Interactive Data Visualization of Census and General Data
 This is an interactive and user-friendly dashboard where users can upload their data files in either CSV or Excel format and interactively generate different types of charts like bar charts, pie charts, scatter plots, and choropleth maps (for displaying state-wise data in India).
 
+This is a project done for IDEAS-TIH Data Science Internship 2024 (ISI Kolkata)
+
+Project Code: CO29
+
+Project topic: Visualization
+
+
 # Problem  Statement
 
 This project involves creating an interactive dashboard using Streamlit that allows users to visualize census and general datasets in various customizable chart formats. It provides a user-friendly interface where users can upload their data files in either CSV or Excel format and interactively generate different types of charts, including bar charts, pie charts, scatter plots, and choropleth maps (for displaying state-wise data in India). The aim is to make data exploration more accessible by offering dynamic filtering, flexible axis selection, and visualization customization, especially useful for non-technical users.
