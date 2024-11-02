@@ -47,6 +47,8 @@ Below is a step-by-step guide for using the Streamlit dashboard:
   
   Add titles for each chart and select colors from predefined options to personalize the visuals.
   
+# Tutorial for navigating through our dashboard: 
 
+Tutorial Video_Streamlit dashboard.mp4
 
 
