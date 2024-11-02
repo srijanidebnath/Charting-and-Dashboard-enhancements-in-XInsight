@@ -56,6 +56,6 @@ Below is a step-by-step guide for using the Streamlit dashboard:
   
 # Tutorial for navigating through our dashboard: 
 
-Tutorial Video_Streamlit dashboard.mp4
+https://github.com/srijanidebnath/Streamlit-Dashboard-for-Interactive-Data-Visualization-of-Census-and-General-Data/blob/main/Tutorial%20Video_Streamlit%20dashboard.mp4
 
 
