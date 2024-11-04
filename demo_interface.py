@@ -119,14 +119,26 @@ if uploaded_file:
         color_options = ["Blue", "Green", "Red", "Purple", "Orange"]
 
         # Display Bar Chart
+        # Display Bar Chart
         if display_bar and not filtered_df.empty:
+    # Allow the bar chart to take a categorical column on either the x or y axis
             if (x_axis in categorical_columns and y_axis in numeric_columns) or (y_axis in categorical_columns and x_axis in numeric_columns):
                 bar_chart_title = st.text_input("Enter Bar Chart Title", key="bar_title")
                 bar_color = st.selectbox("Select Bar Chart Color", options=color_options, key="bar_color")
-                bar_chart = alt.Chart(filtered_df).mark_bar(color=bar_color.lower()).encode(
-                    x=alt.X(f"{x_axis}", type="nominal") if x_axis in categorical_columns else alt.Y(f"{y_axis}", type="nominal"),
-                    y=alt.Y(f"{y_axis}", type="quantitative") if y_axis in numeric_columns else alt.X(f"{x_axis}", type="quantitative")
-                ).properties(title=bar_chart_title)
+        
+        # Dynamically set the axis encoding based on which axis is categorical
+                if x_axis in categorical_columns and y_axis in numeric_columns:
+                    bar_chart = alt.Chart(filtered_df).mark_bar(color=bar_color.lower()).encode(
+                    x=alt.X(f"{x_axis}", type="nominal"),
+                    y=alt.Y(f"{y_axis}", type="quantitative")
+            )
+                elif y_axis in categorical_columns and x_axis in numeric_columns:
+                    bar_chart = alt.Chart(filtered_df).mark_bar(color=bar_color.lower()).encode(
+                    x=alt.X(f"{x_axis}", type="quantitative"),
+                    y=alt.Y(f"{y_axis}", type="nominal")
+            )
+        
+                bar_chart = bar_chart.properties(title=bar_chart_title)
                 st.markdown(f"### **{bar_chart_title}**", unsafe_allow_html=True)
                 st.altair_chart(bar_chart)
             else:
@@ -192,3 +204,4 @@ if uploaded_file:
         if apply_filters and not filtered_df.empty:
             st.header("Filtered Dataset")
             st.write(filtered_df)
+
